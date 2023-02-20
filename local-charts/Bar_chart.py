@@ -18,11 +18,10 @@ import pandas as pd
 # fig = go.Figure(data, layout)
 # pyo.plot(fig)
 
-df = pd.read_csv('data/mocksurvey.csv', index_col=0)
+df = pd.read_csv("data/mocksurvey.csv", index_col=0)
 # print(df.head())
 
-data = [go.Bar(y=df.index, x=df[i], name=i, orientation='h')
-        for i in df.columns]
-layout = go.Layout(title='Mock Survey', barmode='stack')
+data = [go.Bar(y=df.index, x=df[i], name=i, orientation="h") for i in df.columns]
+layout = go.Layout(title="Mock Survey", barmode="stack")
 fig = go.Figure(data, layout)
 pyo.plot(fig)

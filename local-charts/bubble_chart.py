@@ -14,6 +14,6 @@ import pandas as pd
 # pyo.plot(fig, filename='bubble.html')
 
 """__Exercise__
-   Objective: Create a bubble chart that compares three other features from the mpg.csv dataset. 
+   Objective: Create a bubble chart that compares three other features from the mpg.csv dataset.
    Fields include: 'mpg', 'cylinders', 'displacement' 'horsepower', 'weight', 'acceleration', 'model_year', 'origin', 'name'
    """
