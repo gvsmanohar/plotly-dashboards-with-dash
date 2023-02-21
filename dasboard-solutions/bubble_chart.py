@@ -17,3 +17,25 @@ import pandas as pd
    Objective: Create a bubble chart that compares three other features from the mpg.csv dataset.
    Fields include: 'mpg', 'cylinders', 'displacement' 'horsepower', 'weight', 'acceleration', 'model_year', 'origin', 'name'
    """
+
+df = pd.read_csv("data/mpg.csv")
+
+data = [
+    go.Scatter(
+        x=df["displacement"],
+        y=df["acceleration"],
+        marker=dict(size=df["weight"] / 500),
+        mode="markers",
+        text=df["name"],
+    )
+]
+
+layout = go.Layout(
+    xaxis=dict(title="Discplacement"),
+    yaxis=dict(title="Acceleration"),
+    title="Displacement vs Acceleration",
+    hovermode="closest",
+)
+
+fig = go.Figure(data, layout)
+pyo.plot(fig)
